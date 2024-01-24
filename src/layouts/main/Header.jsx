@@ -10,7 +10,6 @@ export default function Header() {
           navigate("/");
         }}
       >
-        <Logo/>
         3D DEMO
       </div>
     </div>
