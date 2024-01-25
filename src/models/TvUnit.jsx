@@ -1,15 +1,15 @@
-import { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useFrame} from "@react-three/fiber";
-import {a} from "@react-spring/three"
-
-import tvUnitScene from "../assets/3d/tv_unit.glb"
+import { useFrame, useThree } from "@react-three/fiber";
+import { useRef } from "react";
+import tvUnitScene from "../assets/3d/tv_unit.glb";
 
 export function TvUnit(props) {
-    const tvRef = useRef();
-    useFrame(() => {
-      tvRef.current.rotation.y += 0.01;
-    });
+  const { viewport } = useThree();
+  const tvRef = useRef();
+  useFrame(({ mouse }) => {
+    const x = (mouse.x * viewport.width) / 2;
+    tvRef.current.rotation.set(0, x, 0);
+  });
   const { nodes, materials } = useGLTF(tvUnitScene);
   return (
     <group ref={tvRef} {...props} position={[-0.5, -1, 0]}>

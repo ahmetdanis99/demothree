@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Vcanvas from "../components/Vcanvas";
+import Card from "../layouts/card/card";
 import { Products } from "../utils/const";
 
 export default function Detail() {
@@ -16,7 +16,7 @@ export default function Detail() {
   return (
     <div className="flex gap-4 justify-center">
       <div className="w-[400px] h-[400px]">
-        <Vcanvas>{selectedProduct.modelComponent}</Vcanvas>
+        <Card product={selectedProduct}></Card>
       </div>
       <div>
         <h2>{selectedProduct.title}</h2>

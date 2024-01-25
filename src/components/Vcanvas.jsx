@@ -6,7 +6,7 @@ export default function Vcanvas({ children }) {
   return (
     <Canvas
       className="border border-black bg-gray-200"
-      camera={{ near: 0.1, far: 1000, position: [0, 0, 10] }}
+      camera={{ near: 0.1, far: 1000, position: [0, 0, 2] }}
     >
       <Suspense fallback={<Loader />}>
         <directionalLight position={[0, 40, 10]} intensity={3} />

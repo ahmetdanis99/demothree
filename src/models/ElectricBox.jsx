@@ -1,12 +1,14 @@
 import { useGLTF } from "@react-three/drei";
+import { useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import electricBoxScene from "../assets/3d/electric_box.glb";
-import { useFrame } from "@react-three/fiber";
 
 export default function ElectricBox(props) {
+  const { viewport } = useThree();
   const boxRef = useRef();
-  useFrame(() => {
-    boxRef.current.rotation.y += 0.005;
+  useFrame(({ mouse }) => {
+    const x = (mouse.x * viewport.width) / 2;
+    boxRef.current.rotation.set(0, x, 0);
   });
   const { nodes, materials } = useGLTF(electricBoxScene);
   return (
