@@ -4,10 +4,10 @@ import Loader from "../../components/Loader";
 
 export default function Card({ product }) {
   return (
-    <div className="flex-none aspect-video rounded-t-md rounded-b bg-purple-700">
+    <div className="flex-none border-2 border-slate-400 aspect-video rounded-t-md rounded-b bg-gray-200 ">
       <div className="w-full h-5/6 ">
         <Canvas
-          className="bg-red-500"
+          className="bg-white border-b-2 border-slate-400"
           camera={{ near: 0.1, far: 1000, position: [0, 0, 2] }}
         >
           <Suspense fallback={<Loader />}>
@@ -21,6 +21,11 @@ export default function Card({ product }) {
             {product.modelComponent}
           </Suspense>
         </Canvas>
+      </div>
+      <div className="flex justify-center">
+        <div className="flex justify-center text-xl text-black">
+          {product.title}
+        </div>
       </div>
     </div>
   );

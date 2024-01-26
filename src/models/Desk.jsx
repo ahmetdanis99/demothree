@@ -6,13 +6,14 @@ import deskScene from "../assets/3d/desk.glb";
 export default function Desk(props) {
   const { viewport } = useThree();
   const deskRef = useRef();
+
   useFrame(({ mouse }) => {
-    const x = (mouse.x * viewport.width) / 2;
-    deskRef.current.rotation.set(0, x, 0);
+    const x = (mouse.x * 2.5 * viewport.width) / 2;
+    deskRef.current.rotation.set(0, 3.2 + x, 0);
   });
   const { nodes, materials } = useGLTF(deskScene);
   return (
-    <group ref={deskRef} {...props} position={[0, -0.6, 0.6]}>
+    <group ref={deskRef} {...props} position={[0, -0.5, 1]}>
       <group position={[0.002, 0.023, 0]}>
         <mesh
           castShadow
