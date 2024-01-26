@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Carddetail from "../layouts/card/detailCard";
 import { Products } from "../utils/const";
-import Tvunitqr from "../qrcode/tvunitqr";
 
 export default function Detail() {
   const { id } = useParams();
