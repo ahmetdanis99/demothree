@@ -1,9 +1,9 @@
 import Desk from "../models/Desk";
 import { TvUnit } from "../models/TvUnit";
 import Armchair from "../models/armchair";
-import Armchairqr from "../qrcode/armchairqr";
-import Deskqr from "../qrcode/deskqr";
-import Tvunitqr from "../qrcode/tvunitqr";
+import Armchairqr from "../qrcode/Armchairqr";
+import Deskqr from "../qrcode/Deskqr";
+import Tvunitqr from "../qrcode/Tvunitqr";
 
 export const Products = [
   {
