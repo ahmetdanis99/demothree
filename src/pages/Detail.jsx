@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Carddetail from "../layouts/card/detailCard";
 import { Products } from "../utils/const";
+import Tvunitqr from "../qrcode/tvunitqr";
 
 export default function Detail() {
   const { id } = useParams();
@@ -25,7 +26,7 @@ export default function Detail() {
               <h2 className="text-black text-4xl">{selectedProduct.title}</h2>
             </div>
             <div className="flex items-center justify-center h-full">
-              <div className="h-1/2 w-1/2 bg-black">{selectedProduct.qrCode}</div>
+              <div className="h-1/2 w-1/2">{selectedProduct.qrCode}</div>
             </div>
           </div>
         </div>

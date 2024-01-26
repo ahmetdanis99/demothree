@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Card from "../layouts/card/card";
 import { Products } from "../utils/const";
+import Logo from "../assets/Logo/Logo";
 
 export default function Home() {
   return (
@@ -11,5 +12,6 @@ export default function Home() {
         </Link>
       ))}
     </main>
+    
   );
 }
