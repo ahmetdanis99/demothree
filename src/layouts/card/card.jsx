@@ -4,10 +4,10 @@ import Loader from "../../components/Loader";
 
 export default function Card({ product }) {
   return (
-    <div className="flex-none border-2 border-slate-400 aspect-video rounded-t-md rounded-b bg-gray-200 ">
-      <div className="w-full h-5/6 ">
+    <div className=" border-[3px] border-[#54f4ff] overflow-hidden rounded-br-3xl">
+      <div className="aspect-video">
         <Canvas
-          className="bg-white border-b-2 border-slate-400"
+          className="bg-white border-b-4 border-[#54f4ff]"
           camera={{ near: 0.1, far: 1000, position: [0, 0, 2] }}
         >
           <Suspense fallback={<Loader />}>
@@ -22,10 +22,11 @@ export default function Card({ product }) {
           </Suspense>
         </Canvas>
       </div>
-      <div className="flex justify-center">
-        <div className="flex justify-center text-xl text-black">
+        <div className="flex justify-between items-center px-9 h-12 md:text-2xl text-black bg-slate-100">
           {product.title}
-        </div>
+          <div>
+            Detaylar 
+          </div>
       </div>
     </div>
   );

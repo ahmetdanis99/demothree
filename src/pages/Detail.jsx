@@ -19,13 +19,21 @@ export default function Detail() {
         <div className="md:w-1/2 p-6">
           <Carddetail product={selectedProduct} />
         </div>
-        <div className="md:w-1/2 -mt-7 md:mt-0 flex flex-col items-center p-6">
-          <div className="p-2 bg-gray-200 w-full min-h-full">
-            <div className="flex justify-center">
-              <h2 className="text-black text-4xl">{selectedProduct.title}</h2>
-            </div>
-            <div className="flex items-center justify-center h-full">
-              <div className="h-1/2 w-1/2">{selectedProduct.qrCode}</div>
+        <div className="md:w-1/2 -mt-7 md:mt-0 flex items-center p-6">
+          <div className="bg-[#94f8ff] w-full h-full p-2 rounded-3xl">
+            <div className=" bg-slate-100 h-full flex justify-center rounded-2xl">
+              <div className="flex w-full flex-col text-5xl items-center gap-6 m-2">
+                <h2 className="text-black">{selectedProduct.title}</h2>
+                <div className="flex flex-wrap w-full text-3xl">
+                  <div className="w-full">Ürünün Özellikleri</div>
+                  <div className="w-full text-xl">· {selectedProduct.Dimensions}</div>
+                  <div className="w-full text-xl">· {selectedProduct.pColor}</div>
+                  <div className="w-full text-xl">· {selectedProduct.Garanti}</div>
+                </div>
+                <div className="w-full h-full flex justify-center items-center">
+                  <div className="w-1/3">{selectedProduct.qrCode}</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

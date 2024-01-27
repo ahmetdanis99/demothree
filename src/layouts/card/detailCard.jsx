@@ -4,9 +4,8 @@ import Loader from "../../components/Loader";
 
 export default function Carddetail({ product }) {
   return (
-    <div className="flex-none rounded-t-md rounded-b w-full aspect-square">
+    <div className="flex-none rounded-t-md rounded-b w-full aspect-square border-4 border-[#54f4ff]">
       <Canvas
-        className="border-2 border-slate-400"
         camera={{ near: 0.1, far: 1000, position: [0, 0, 3] }}
       >
         <Suspense fallback={<Loader />}>

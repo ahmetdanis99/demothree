@@ -13,7 +13,7 @@ export function TvUnit(props) {
   });
   const { nodes, materials } = useGLTF(tvUnitScene);
   return (
-    <group ref={tvRef} {...props} position={[-0.5, -1, -0.4]}>
+    <group ref={tvRef} {...props} position={[-0.3, -1, -0.4]}>
       <mesh
         castShadow
         receiveShadow
