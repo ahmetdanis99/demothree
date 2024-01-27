@@ -8,12 +8,12 @@ export function TvUnit(props) {
   const tvRef = useRef();
 
   useFrame(({ mouse }) => {
-    const x = (mouse.x *2.5* viewport.width) / 2;
+    const x = (mouse.x *1.3* viewport.width) / 2;
     tvRef.current.rotation.set(0, x, 0);
   });
   const { nodes, materials } = useGLTF(tvUnitScene);
   return (
-    <group ref={tvRef} {...props} position={[-0.3, -1, -0.4]}>
+    <group ref={tvRef} {...props} position={[-0.3, -0.8, -0.4]}>
       <mesh
         castShadow
         receiveShadow

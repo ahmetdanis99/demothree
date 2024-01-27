@@ -8,7 +8,7 @@ export default function Desk(props) {
   const deskRef = useRef();
 
   useFrame(({ mouse }) => {
-    const x = (mouse.x * 2.5 * viewport.width) / 2;
+    const x = (mouse.x * 1.3 * viewport.width) / 2;
     deskRef.current.rotation.set(0, 3.2 + x, 0);
   });
   const { nodes, materials } = useGLTF(deskScene);

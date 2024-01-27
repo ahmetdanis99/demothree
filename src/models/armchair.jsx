@@ -8,7 +8,7 @@ export default function Armchair(props) {
   const armchairRef = useRef();
 
   useFrame(({ mouse }) => {
-    const x = (mouse.x * viewport.width) / 2;
+    const x = (mouse.x * 1.4 * viewport.width) / 2;
     armchairRef.current.rotation.set(0, x, 0);
   });
   const { nodes, materials } = useGLTF(armchairScene);
